@@ -1,0 +1,8 @@
+﻿<Window x:Class="Istorie.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window1" Height="60" Width="100">
+    <Grid>
+        <Button Name="incarca" Click="incarca_Click_1">Incarca</Button>
+    </Grid>
+</Window>

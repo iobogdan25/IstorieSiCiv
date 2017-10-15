@@ -1,0 +1,32 @@
+﻿<Window x:Class="Istorie.AdaugaLectie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AdaugaLectie" Height="550" Width="500">
+    <Grid>
+        <StackPanel Margin="7">
+            <StackPanel Orientation="Horizontal" Margin="0,2,0,2">
+                <Label>Denumire lectie :</Label>
+                <TextBox Name="denumire" Width="200" Height="25"></TextBox>
+            </StackPanel >
+            <StackPanel Orientation="Horizontal" Margin="0,2,0,2">
+                <Label>Cale catre poza lectiei:</Label>
+                <TextBox Name="cale" Width="200" Height="25" TextChanged="TextBox_TextChanged_1"></TextBox>
+                
+            </StackPanel>
+            <Image Width="100" Height="70" Name="imagine"></Image>
+            <TextBlock>Text lectie : </TextBlock>
+            <ScrollViewer>
+                <StackPanel>
+                <RichTextBox Height="300" AcceptsTab="True" Name="textLectie">
+                    <RichTextBox.Resources>
+                        <Style TargetType="{x:Type Paragraph}">
+                            <Setter Property="LineHeight" Value="0.1"/>
+                        </Style>
+                    </RichTextBox.Resources>
+                </RichTextBox>
+                </StackPanel>
+            </ScrollViewer>
+            <Button Click="Button_Click_2">Adauga lectie</Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,76 @@
+﻿<Window x:Class="Istorie.RevolutiaIndustriala"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ConsolidareSUA" Height="850" Width="850">
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/chainimage-old-paper-background-old-paper-background.jpg"/>
+    </Window.Background>
+
+    <Grid Name="main_grid">
+        <ScrollViewer>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" BorderThickness="0.5" BorderBrush="Black" Margin="40,50,0,0">
+                    <StackPanel >
+                        <Image Source="Resources/Stephenson's_Rocket.jpg" Stretch="Fill" Margin="10"></Image>
+                        <TextBlock HorizontalAlignment="Center" FontFamily="Georgia" FontStyle="Italic" FontSize="14" TextWrapping="Wrap">Locomotiva Rocket a lui George Stephenson</TextBlock>
+                        <Image Source="Resources/prima-fotografie.jpg" Stretch="Fill" Margin="10"></Image>
+                        <TextBlock HorizontalAlignment="Center" FontFamily="Georgia" FontStyle="Italic" FontSize="14" TextWrapping="Wrap">Prima fotografie</TextBlock>
+                        <Image Source="Resources/6a00d83451c56869e200e54f4578b88833-640wi.jpg" Stretch="Fill" Margin="10"></Image>
+                        <TextBlock HorizontalAlignment="Center" FontFamily="Georgia" FontStyle="Italic" FontSize="14" TextWrapping="Wrap">Bicicleta-H.G. Lawson</TextBlock>
+
+                    </StackPanel>
+                </Border>
+                <StackPanel Margin="10,10,10,0" Grid.Column="1">
+                    <TextBlock FontSize="30" FontFamily="Georgia">Revolutia industriala</TextBlock>
+                    <Line StrokeThickness="0.9" X1="2" Fill="Black" Stroke="Black" X2="3000"/>
+                    <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       Revoluția industrială s-a declanșat la sfârșitul secolului al XVIII-lea și în primele decenii ale secolului al XIX-lea mai întâi în Anglia, care a reușit să se mențină ca prima putere industrială a lumii până la sfârșitul secolului al XIX-lea. În Franța, revoluția industrială a evoluat lent, începuturile ei datând din jurul anilor 1830. Cererea scăzută de produse industriale în condițiile unei populații predominant agrare a făcut că adevărata eră industrială să înceapă abia în 1890. Industrializarea Germaniei a fost marcată de fărâmițarea sa politică, condițiile favorabile declanșării revoluției în acest domeniu fiind create prin anii 1840-1850. Dezvoltarea industrială a SUA a debutat la mijlocul secolului al XIX-lea prin aplicarea unei multitudini de invenții și inovații. Sosirea masivă de emigranți după 1865 a antrenat o puternică dezvoltare a economiei americane și astfel în jurul anului 1900 SUA au devenit prima țară industrială din lume. Descoperirile din domeniul științific au impulsionat apariția unor tehnici și invenții moderne:</TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       <Span FontStyle="Italic"> a) 1698 Denis Pepin a inventat cazanul cu aburi sub presiune. </Span></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       <Span FontStyle="Italic">b) 1712 Thomas Newcomen a construit un motor cu aburi prevăzut cu piston și cilindru, însă abia în anul 1784 când James Watt inventează motorul cu aburi perfecționat se consideră că a început revoluția industrială.</Span></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       <Span FontStyle="Italic">c) Aceasta s-a manifestat cu precădere în domeniul textil, la început. Astfel John Kay inventează suveica zburătoare care permitea realizarea de țesături mult mai late decât până la acel moment. Apoi la 1765 James Hargreaves inventează mașina de tors și la 1789 Edmund Cartwright războiul de țesut. În acest moment Anglia primește numele de "atelierul lumii".</Span></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       <Span FontStyle="Italic">d) Importante descoperiri se fac și în alte domenii, precum în metalurgie : Abraham Darby inventează fonta pe bază de cocs, Wilkinson laminarea oțelului.</Span></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       Aceste progrese au impulsionat fenomenul de „revoluție industrială”.</TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       În 1791 au fost introduse zece amendamente privind drepturi și libertăți ale cetățenilor. Fiecare stat component(50 în total) are propriile instituții și legi. Sistemul politic american are la bază două partide: Partidul Republican și Partidul Democrat.</TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       Revoluția industrială a fost un proces tehnic complex prin care munca manuală a fost înlocuită cu mașinismul. În acest proces mecanizat muncitorului îi revine rolul de supraveghere, reglare și alimentare a mașinii și control al calității. Revoluția industrială a avut ca efect creșterea producției, dezvoltarea orașelor și a științei.</TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       Primul domeniu în care a fost utilizată mașina cu abur a fost industria textilă.</TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       Impactul social al revoluției industriale a marcat dezvoltarea diviziunii sociale a muncii, au apărut noi ramuri de producție, noi centre industriale, s-au impus relațiile economice capitaliste în fața celor feudale. De asemenea, apare clasa mijlocie, categorie ce beneficia de câștiguri financiare rezonabile și care avea un comportament atent față de elitele burgheze sau aristocratice. Se observă o mare schimbare în vestimentație și în investițiile pentru locuințele aspectuoase și confortabile. Dintre toate clasele sociale se afirmă burghezia, cea care este o clasă de bază a societății capitaliste.</TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       Impactul tehnic a provocat o puternică impulsionare în domeniul invențiilor, apar fabrici, uzine, iar munca manuala se înlocuiește cu cea mecanizată. O importantă invenție a fost făcută in anul 1760, când James Watt a inventat motorul cu aburi, care a început să fie utilizat în diferite ramuri ale industriei. În anul 1829 inventatorul și inginerul englez George Stephenson inaugurează locomotiva „Racheta”, care este considerată prima locomotivă rentabilă.</TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">
+    Principalele invenții
+    1814 - locomotiva-George Stephenson
+    1816 - fotografia-Nicéphore Niépce
+    1840 - telegraful prin fir-Samuel Morse
+    1856 - convertizorul pentru producerea oțelului-Henry Bessemer
+    1863 - pasteurizarea alimentelor-Louis Pasteur
+    1866 - dinamul-Ernst von Siemens
+    1867 - dinamita-Alfred Nobel
+    1876 - telefonul-Alexander Graham Bell (Innocenzo Manzetti - 1844)
+    1876 - bicicleta-H.G. Lawson
+    1877 - fonograful-Thomas Edison
+    1879 - becul-Thomas Edison
+    1885 - automobilul-Gottlieb Daimler și Karl Benz
+    1895 - cinematograful-Frații Lumiere
+    1895 - telegraful fără fir-Guglielmo Marconi
+    1869 - Deschiderea Canalului Suez
+    1914 - Deschiderea Canalului Panama</TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve"></TextBlock>
+                </StackPanel>
+                <Border Grid.Column="2" BorderThickness="0.5" BorderBrush="Black" Margin="0,50,40,0">
+                    <StackPanel >
+                        <Image Source="Resources/fonograful-lui-Thomas-Edison.jpg" Stretch="Fill" Margin="10"></Image>
+                        <TextBlock HorizontalAlignment="Center" FontFamily="Georgia" FontStyle="Italic" FontSize="14" TextWrapping="Wrap">Fonograful-Thomas Edison</TextBlock>
+                        <Image Source="Resources/d14ccfea480f9236250a119f41b50c140d82803b.jpg" Stretch="Fill" Margin="10"></Image>
+                        <TextBlock HorizontalAlignment="Center" FontFamily="Georgia" FontStyle="Italic" FontSize="14" TextWrapping="Wrap">Becul-Thomas Edison</TextBlock>
+                    
+                        <Image Source="Resources/primul-automobil-din-lume-este-un-benz-din-18861342605921.jpg" Stretch="Fill" Margin="10"></Image>
+                        <TextBlock HorizontalAlignment="Center" FontFamily="Georgia" FontStyle="Italic" FontSize="14" TextWrapping="Wrap">Automobilul-Gottlieb Daimler și Karl Benz</TextBlock>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Window>

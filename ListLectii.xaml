@@ -1,0 +1,42 @@
+﻿<Window x:Class="Istorie.ListLectii"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ListLectii" Height="300" Width="300">
+    <Window.Resources>
+        <ContextMenu x:Key="cmButton">
+            <MenuItem Header="Sterge"  Click="MenuItem_Click_1"/>
+        </ContextMenu>
+    </Window.Resources>
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Name="m_stack">
+                <Border BorderBrush="Black" Margin="3" BorderThickness="0.9">
+                    <Grid Height="70" Width="240" Background="White" Name="consolidareaSua" MouseLeftButtonDown="consolidareaSua_MouseLeftButtonDown">
+                        <!--<Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1.7*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>-->
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Source="Resources/drapel-steag-fanion-america-sua.jpg" HorizontalAlignment="Left" Width="100" Height="70"/>
+                            <TextBlock  Margin="4,0,0,0" FontSize="16" VerticalAlignment="Center">Consolidarea SUA</TextBlock>
+                        </StackPanel>
+                    </Grid>
+                
+                </Border>
+                <Border BorderBrush="Black" Margin="3" BorderThickness="0.9">
+                    <Grid Height="70" Width="240" Background="White"  Name="revolutiaIndustriala" MouseLeftButtonDown="revolutiaIndustriala_MouseLeftButtonDown">
+                        <!--<Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1.7*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>-->
+                        <StackPanel Orientation="Horizontal">
+                            <Image Grid.Column="0" Source="Resources/Barrow_Steelworks.jpg" HorizontalAlignment="Left" Width="100" Height="70"></Image>
+                            <TextBlock Grid.Column="1" Margin="4,0,0,0" FontSize="16" VerticalAlignment="Center">Revolutia industriala</TextBlock>
+                        </StackPanel>
+                    </Grid>
+
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

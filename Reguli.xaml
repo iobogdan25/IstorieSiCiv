@@ -1,0 +1,97 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Istorie.Reguli"
+        KeyDown="Grid_KeyDown_1" Title="Reguli" Height="500" Width="900">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0" Source="Resources/lock.png" Panel.ZIndex="100" x:Name="wrong_image_1" Visibility="Hidden"/>
+        <Grid Grid.Column="0" x:Name="grid_player_1">
+            <StackPanel Grid.Row="1">
+                <Label FontWeight="Bold" FontSize="20" Foreground="Red" Content="REGULAMENT!"/>
+                <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13"><Run Text="      Fiecare duel are un set de 10 intrebari, iar la ficare intrebare aveti la dispozitie 30 de secunde pentru a raspunde."/></TextBlock>
+                <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13"><Run Text="      Intrebarile sunt cu raspuns multiplu. Pentru fiecare raspuns corect, primesti 10 puncte, la sfarsitul duelului, jucatorul cu cele mai multe puncte este declarat invingator"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13"><Run Text="      Tastele corespunzatoare raspunsurile sunt:"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13"><Run Text="      Raspunsul A: tasta A"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13"><Run Text="      Raspunsul B: tasta S"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13"><Run Text="      Raspunsul C: tasta D"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13"><Run Text="      Raspunsul D: tasta F"/></TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Resources/Taste/47-computer_key_A.png" Height="50" Width="50" Margin="30,5,20,5"/>
+                    <Image Source="Resources/Taste/52-computer_key_S.png" Height="50" Width="50" Margin="30,5,20,5"/>
+                    <Image Source="Resources/Taste/37-computer_key_D.png" Height="50" Width="50" Margin="30,5,20,5"/>
+                    <Image Source="Resources/Taste/50-computer_key_F.png" Height="50" Width="50" Margin="30,5,20,5"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Grid Height="50" Width="50" x:Name="grid_raspuns_1" Margin="30,0,20,20" Background="#FFD8D8D8" >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" ><Run Text="A"/></TextBlock>
+                    </Grid>
+                    <Grid Height="50" Width="50" x:Name="grid_raspuns_2" Margin="30,0,20,20" Background="#FFD8D8D8" >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"><Run Text="B"/></TextBlock>
+                    </Grid>
+                    <Grid Height="50" Width="50" x:Name="grid_raspuns_3" Margin="30,0,20,20" Background="#FFD8D8D8" >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"><Run Text="C"/></TextBlock>
+                    </Grid>
+                    <Grid Height="50" Width="50" x:Name="grid_raspuns_4" Margin="30,0,20,20" Background="#FFD8D8D8" >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"><Run Text="D"/></TextBlock>
+                    </Grid>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13" VerticalAlignment="Center" FontWeight="Bold"><Run Text="      Pentru a confirma raspunsul apasati tasta X"/></TextBlock>
+                    <Image Source="Resources/Taste/30-computer_key_X.png" Height="50" Width="50" Margin="10,0,0,0"/>
+                </StackPanel>
+                <Grid Width="170" Height="35" Background="#FFD8D8D8" HorizontalAlignment="Right" Margin="0,10,40,0" x:Name="grid_trimitere"  >
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"><Run Text="Incepe jocul (apasa X)"/></TextBlock>
+                </Grid>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1" Opacity="1" x:Name="grid_player_2">
+
+            <StackPanel Grid.Row="1">
+                <Label FontWeight="Bold" FontSize="20" Foreground="Red" Content="REGULAMENT!"/>
+                <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13"><Run Text="      Fiecare duel are un set de 10 intrebari, iar la ficare intrebare aveti la dispozitie 30 de secunde pentru a raspunde."/></TextBlock>
+                <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13"><Run Text="      Intrebarile sunt cu raspuns multiplu. Pentru fiecare raspuns corect, primesti 10 puncte, la sfarsitul duelului, jucatorul cu cele mai multe puncte este declarat invingator"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13"><Run Text="      Tastele corespunzatoare raspunsurile sunt:"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13"><Run Text="      Raspunsul A: tasta U"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13"><Run Text="      Raspunsul B: tasta I"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13"><Run Text="      Raspunsul C: tasta O"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13"><Run Text="      Raspunsul D: tasta P"/></TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Resources/Taste/94-computer_key_U.png" Height="50" Width="50" Margin="30,5,20,5"/>
+                    <Image Source="Resources/Taste/9-computer_key_I.png" Height="50" Width="50" Margin="30,5,20,5"/>
+                    <Image Source="Resources/Taste/34-computer_key_O.png" Height="50" Width="50" Margin="30,5,20,5"/>
+                    <Image Source="Resources/Taste/25-computer_key_P.png" Height="50" Width="50" Margin="30,5,20,5"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Grid Height="50" Width="50"  Margin="30,0,20,20" Background="#FFD8D8D8" >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" ><Run Text="A"/></TextBlock>
+                    </Grid>
+                    <Grid Height="50" Width="50"  Margin="30,0,20,20" Background="#FFD8D8D8" >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"><Run Text="B"/></TextBlock>
+                    </Grid>
+                    <Grid Height="50" Width="50"  Margin="30,0,20,20" Background="#FFD8D8D8" >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"><Run Text="C"/></TextBlock>
+                    </Grid>
+                    <Grid Height="50" Width="50"  Margin="30,0,20,20" Background="#FFD8D8D8" >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"><Run Text="D"/></TextBlock>
+                    </Grid>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock TextWrapping="Wrap" xml:space="preserve" FontSize="13" VerticalAlignment="Center" FontWeight="Bold"><Run Text="      Pentru a confirma raspunsul apasati tasta K"/></TextBlock>
+                    <Image Source="Resources/Taste/100-computer_key_K.png" Height="50" Width="50" Margin="10,0,0,0"/>
+                </StackPanel>
+                <Grid Width="170" Height="35" Background="#FFD8D8D8" HorizontalAlignment="Right" Margin="0,10,40,0"  >
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"><Run Text="Incepe jocul (apasa K)"/></TextBlock>
+                </Grid>
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

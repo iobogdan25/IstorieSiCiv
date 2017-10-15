@@ -1,0 +1,35 @@
+﻿<Window x:Class="Istorie.VizualizareLectie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="VizualizareLectie" Height="300" Width="300">
+    <Window.Background>
+        <ImageBrush Opacity="1" ImageSource="Resources/chainimage-old-paper-background-old-paper-background.jpg"/>
+    </Window.Background>
+    <Grid Name="main_grid">
+        <ScrollViewer>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" BorderThickness="0.5" BorderBrush="Black" Margin="40,50,0,0">
+                    <StackPanel >
+                        <Label>Marime text</Label>
+                        <Slider SmallChange="1" Maximum="35" Value="17" Minimum="8" ValueChanged="Slider_ValueChanged_1" Name="marime"></Slider>
+                    </StackPanel>
+                </Border>
+                <StackPanel Margin="10,10,10,0" Grid.Column="1" >
+                    <TextBlock FontSize="30" FontFamily="Georgia" Name="titlu"></TextBlock>
+                    <Line StrokeThickness="0.9" X1="2" Fill="Black" Stroke="Black" X2="3000"/>
+                    <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve" Name="textLectiee"></TextBlock>
+                     </StackPanel>
+                <Border Grid.Column="2" BorderThickness="0.5" BorderBrush="Black" Margin="0,50,40,0">
+                    <StackPanel >
+                        
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Window>

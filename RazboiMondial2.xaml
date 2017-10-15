@@ -1,0 +1,461 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Istorie.RazboiMondial2"
+        Title="Al doilea razboi mondial" Height="700" Width="800" 
+        WindowStyle="None" ResizeMode="NoResize"  
+        WindowStartupLocation="CenterScreen" WindowState="Maximized" BorderThickness="0,0,0,0">
+    <Grid>
+        <Expander  ExpandDirection="Right"    HorizontalAlignment="Left" Panel.ZIndex="9999">
+            <StackPanel  HorizontalAlignment="Left" Background="#FFF6FFE0" >
+                <Border Background="Black" CornerRadius="0" BorderThickness="0.4" Margin="4,40,4,4">
+                    <Label MouseLeftButtonDown="Label_MouseLeftButtonDown_2" HorizontalContentAlignment="Center" Background="#FF17FF00" FontWeight="Bold" Foreground="Black" RenderTransformOrigin="0.5,0.5" Content="MENIU PRINCIPAL"/>
+                </Border>
+                <Border Background="Black" CornerRadius="0" BorderThickness="0.4" Margin="4,4,4,4">
+                    <Label MouseLeftButtonDown="Label_MouseLeftButtonDown_5" HorizontalContentAlignment="Center" Background="#FFFFB900" FontWeight="Bold" Foreground="Black" RenderTransformOrigin="0.5,0.5" Content="Al doilea razboi mondial, beligeranti"/>
+                </Border>
+                <Border Background="Black" CornerRadius="0" BorderThickness="0.4" Margin="4,4,4,4">
+                    <Label MouseLeftButtonDown="Label_MouseLeftButtonDown_4" HorizontalContentAlignment="Center" Background="#FFFFB900" FontWeight="Bold" Foreground="Black" RenderTransformOrigin="0.5,0.5" Content="Harta 1945"/>
+                </Border>
+                <Border Background="Black" CornerRadius="0" BorderThickness="0.4" Margin="4,4,4,4">
+                    <Label MouseLeftButtonDown="Label_MouseLeftButtonDown_3" HorizontalContentAlignment="Center" Background="#FFFFB900" FontWeight="Bold" Foreground="Black" RenderTransformOrigin="0.5,0.5" Content="Cronologia celui de-al doilea razboi mondial"/>
+                </Border>
+                <Border Background="Black" CornerRadius="0" BorderThickness="0.4" Margin="4">
+                    <Label MouseLeftButtonDown="Label_MouseLeftButtonDown_1" HorizontalContentAlignment="Center" Background="Red" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.5,0.5" Content="INCHIDE PROGRAM"/>
+                </Border>
+                <Border Background="Black" CornerRadius="0" BorderThickness="0.4" Margin="4">
+                    <Label x:Name="incarcaPlaylist" Background="White" FontWeight="Bold" Foreground="Black" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="incarcaPlaylist_MouseLeftButtonDown" Content="Incarca playlist"/>
+                </Border>
+                <ListBox x:Name="muzicaLB" Height="100" Width="230" MouseLeftButtonDown="muzicaLB_MouseLeftButtonDown" MouseDoubleClick="muzicaLB_MouseDoubleClick"/>
+                <Slider x:Name="volum" Maximum="1" Value="1" ValueChanged="volum_ValueChanged" LargeChange="0.1" SmallChange="0.01"/>
+                <Image x:Name="start_Button" Source="Resources/play-button_318-42541.jpg" Height="30" MouseLeftButtonDown="start_Button_MouseLeftButtonDown" OpacityMask="Black"/>
+                <Image x:Name="stop_Button" Source="Resources/stop-button_318-28623.jpg" Height="30" Margin="0,-30,0,0" Visibility="Hidden" MouseLeftButtonDown="stop_Button_MouseLeftButtonDown"/>
+            </StackPanel>
+        </Expander>
+        <Grid x:Name="harta_1945" Visibility="Hidden" Background="#FFFAFFC3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="399*"/>
+                <ColumnDefinition Width="401*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Label x:Name="tara" Content="Romania"  Margin="20,40,0,0" FontSize="35" Grid.ColumnSpan="2"/>
+                <ScrollViewer Height="600" >
+                    <TextBlock ScrollViewer.CanContentScroll="True" Name="istoric_tara" TextWrapping="Wrap" FontSize="20" Margin="20,20,0,0"></TextBlock>
+                </ScrollViewer>
+            </StackPanel>
+            <Viewbox Grid.Column="1" Stretch="Fill" Width="700" Height="600" HorizontalAlignment="Right" Grid.ColumnSpan="2" Margin="0,50">
+                <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="canvas_principal"  Width="781" Height="600" Clip="F1 M 0,0L 781,0L 781,600L 0,600L 0,0">
+                    <Canvas x:Name="Harta_principala"  Canvas.Left="0" Canvas.Top="0">
+                        <Image x:Name="Image" Source="1945_files/image0.png"  Canvas.Left="0" Canvas.Top="0">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <MatrixTransform Matrix="1,0,0,1,0,0"/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                    </Canvas>
+                    <Canvas x:Name="Romania" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <!--0000C800-->
+                        <Path x:Name="Path" Width="115" Height="81" Canvas.Left="472" Canvas.Top="331" Stretch="Fill" Fill="#0000C800" Data="F1 M 503,404L 499,403L 497,402L 496,399L 498,398L 498,395L 495,394L 492,395L 490,394L 485,389L 485,385L 479,383L 477,379L 476,375L 472,371L 474,369L 475,368L 477,368L 480,367L 481,365L 481,361L 489,351L 490,345L 502,338L 512,338L 517,336L 520,336L 521,337L 522,338L 524,339L 525,340L 527,340L 530,338L 534,336L 540,335L 548,331L 557,338L 558,345L 566,358L 567,363L 567,378L 571,382L 578,384L 579,382L 587,382L 586,389L 575,400L 574,410L 570,410L 566,407L 561,405L 558,404L 552,403L 549,404L 546,406L 542,408L 538,411L 533,412L 527,410L 506,410L 504,408L 503,404 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Moldova" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_0" Width="39.9999" Height="54" Canvas.Left="549" Canvas.Top="325" Stretch="Fill" Fill="#00FF5000" Data="F1 M 549,332L 556,338L 557,344L 560,350L 563,354L 566,357L 567,361L 568,379L 569,379L 579,364L 589,364L 589,355L 580,343L 580,337L 575,333L 569,333L 558,325L 549,332 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Bulgaria" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_1" Width="77" Height="48" Canvas.Left="496" Canvas.Top="402" Stretch="Fill" Fill="#0000C800" Data="F1 M 503,448L 503,442L 497,434L 497,432L 497,427L 502,420L 497,414L 496,411L 496,405L 498,402L 500,403L 503,403L 504,408L 506,409L 525,409L 531,410L 537,412L 548,405L 552,404L 559,404L 566,407C 566,407 573,409 572,409C 571,409 573,412 573,412L 571,417L 566,418L 566,424L 561,429L 565,435L 564,439L 561,441L 559,440L 552,438L 548,442C 548,442 543,443 543,442C 543,441 541,446 541,446L 538,449L 533,450L 529,449L 528,447L 525,445L 520,446L 517,446L 513,447L 513,448L 509,447L 507,449L 503,448 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Grecia" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_2" Width="80.9999" Height="82" Canvas.Left="468" Canvas.Top="442" Stretch="Fill" Fill="#0000C800" Data="F1 M 468,475L 478,464L 480,457L 484,456L 493,451L 496,451L 498,452L 501,449L 508,448L 513,447L 517,446L 521,445L 526,445L 530,449L 534,449L 538,449L 540,447L 542,445L 543,442L 547,442L 549,445L 548,447L 546,448L 545,449L 544,455L 542,457L 538,457L 532,456L 521,456L 514,460L 519,465L 518,470L 515,471L 511,471L 509,468L 505,464L 503,462L 501,461L 499,462C 499,462 499,464 499,465C 499,466 499,469 499,469L 500,471L 502,474L 504,477L 506,480L 501,483L 500,487L 501,489L 505,489C 505,489 506,486 507,486C 508,486 510,487 510,487L 512,488L 514,489L 515,489C 516,489 518,491 518,491L 520,491L 521,493L 521,496L 521,497L 519,498L 517,498L 516,499C 516,499 516,501 516,502C 516,503 516,506 516,506L 514,504L 511,502L 508,502L 507,503L 505,503C 505,503 504,502 506,504C 508,506 509,506 509,506L 509,507C 509,508 508,509 508,509L 506,510L 504,509L 502,509L 501,510L 502,512C 502,512 502,513 503,513C 504,513 504,515 504,515L 505,517L 505,518L 505,521L 505,522C 505,523 504,524 504,524L 503,523L 501,522L 500,521L 498,522L 496,524L 496,522L 495,520L 495,518L 493,517L 492,518L 491,520L 488,518L 487,516L 487,512C 487,512 485,508 484,508C 483,508 481,506 481,506C 481,506 479,501 480,501C 481,501 483,499 484,499C 485,499 488,499 488,499L 488,496L 485,495L 482,494L 479,490L 477,486L 472,480L 468,475 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Iugoslavia" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_3" Width="117" Height="100" Canvas.Left="386" Canvas.Top="356" Stretch="Fill" Fill="#0000C800" Data="F1 M 473,435L 470,433L 468,430L 465,429L 463,430L 461,431L 460,433C 460,433 457,435 458,435C 459,435 459,437 459,437C 459,437 458,440 459,440C 460,440 456,439 456,439L 453,436L 450,433L 447,431L 445,429L 441,427L 439,425L 434,423L 428,423L 425,423L 424,419L 421,417L 417,414C 417,414 414,412 414,411C 414,410 411,409 411,408C 411,407 409,405 409,405L 407,403C 407,403 405,401 407,400C 409,399 406,396 406,396L 404,394L 404,392L 404,390L 403,389C 402,388 400,389 400,390C 400,391 398,392 398,392L 396,393L 393,393C 393,393 388,392 387,385C 386,378 389,383 389,378C 389,373 387,374 387,374L 386,369L 386,364L 387,363L 400,363L 404,360L 410,360L 411,359L 414,359L 416,357L 418,356L 421,357L 423,361L 426,364L 429,366L 432,368L 434,370L 436,371L 439,373L 443,375L 447,374L 450,373L 453,372L 455,372L 460,371L 462,370L 464,368L 467,368L 471,369L 474,370L 475,374L 477,377L 478,380L 480,383L 484,385L 485,389L 487,391L 489,393L 493,395L 497,395L 499,396L 497,399L 496,400L 499,402L 497,405L 495,407L 496,411L 497,414C 497,414 497,416 498,416C 499,416 501,418 501,418L 500,423L 498,426L 496,429L 497,432C 497,432 498,433 498,434C 498,435 500,436 500,436L 502,439L 503,442C 503,442 503,444 503,445C 503,446 503,448 503,448L 501,449L 499,451L 495,451L 492,451L 491,453L 485,455L 481,456L 477,455L 475,452L 474,448L 473,444L 474,438L 473,435 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Ungaria" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_4" Width="82" Height="47.204" Canvas.Left="420" Canvas.Top="328" Stretch="Fill" Fill="#0000C800" Data="F1 M 480,366L 483,359L 487,354L 490,350L 490,345L 502,338L 495,331L 492,330L 487,329L 483,328L 475,328L 470,332L 462,333L 458,335L 452,336L 450,340L 441,341L 436,339C 436,339 434,338 434,337C 434,336 432,336 432,336L 431,341L 424,341C 424,341 422,345 423,345C 424,345 424,347 424,347L 422,353L 420,356L 423,361L 426,364L 433,369L 441,375C 441,375 445,374 445,375C 445,376 452,373 452,373L 458,372L 462,370L 465,368L 469,369C 469,369 471,368 472,369C 473,370 477,368 477,368L 480,366 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Austria" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_5" Width="94" Height="44" Canvas.Left="339" Canvas.Top="319" Stretch="Fill" Fill="#0000C800" Data="F1 M 404,360L 410,360L 415,358L 418,356L 421,355L 423,353L 424,349L 425,346C 425,346 423,345 423,344C 423,343 424,341 424,341L 431,341L 432,338L 433,335L 432,332L 430,330L 429,326L 429,323L 417,321L 405,319L 398,326L 392,323L 379,334L 380,342L 367,342L 359,346L 351,344L 347,346L 341,344L 339,348L 340,354L 346,357L 355,357L 362,354L 371,354L 374,360L 380,362L 386,362C 386,362 388,363 389,363C 390,363 400,363 400,363L 404,360 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Elvetia" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_6" Width="54" Height="32" Canvas.Left="293" Canvas.Top="342" Stretch="Fill" Fill="#0000C800" Data="F1 M 306,373L 302,365L 297,368L 294,368L 293,362L 298,358L 301,353L 304,348L 305,345L 319,344L 324,343L 328,342L 331,344L 335,346L 339,347L 339,352L 342,355L 346,357L 347,360L 344,364L 341,365L 338,365L 336,364C 336,364 332,365 333,365C 334,365 331,371 331,371L 327,370L 324,366L 321,365L 320,367L 318,371L 314,373L 309,374L 306,373 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Cehoslovacia" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_7" Width="127" Height="63" Canvas.Left="368" Canvas.Top="278" Stretch="Fill" Data="F1 M 472,331L 475,328L 483,328L 487,329L 491,330L 493,326L 494,321L 495,316L 492,311L 487,309L 483,309C 483,309 482,311 481,311C 480,311 478,310 477,310C 476,310 472,310 472,310L 469,312L 467,313L 462,309L 461,307L 456,308L 453,307L 444,301L 439,297L 438,293L 430,292L 428,294L 426,296L 422,292L 422,288L 409,281L 405,283L 400,282L 397,278C 397,278 395,281 395,282C 395,283 388,286 388,286L 382,290L 374,294L 368,293L 368,298L 373,301L 373,306L 375,310L 380,314L 386,318L 392,323L 397,326L 402,323L 405,319L 410,319L 415,320L 420,321L 427,322L 429,323C 429,323 428,328 429,328C 430,328 432,334 432,334L 435,337L 440,340L 445,341L 450,340L 452,336L 458,335L 463,332L 469,332L 472,331 Z " Stroke="Black">
+                            <Path.Fill>
+                                <SolidColorBrush Color="Red" Opacity="0"/>
+                            </Path.Fill>
+                        </Path>
+                    </Canvas>
+                    <Canvas x:Name="Polonia" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_8" Width="121" Height="112" Canvas.Left="395" Canvas.Top="203" Stretch="Fill" Fill="#0000C800" Data="F1 M 498,315L 502,303L 509,296L 516,294L 515,283L 511,275L 510,270L 510,260L 505,256L 514,249L 514,239L 511,230L 511,217L 508,218L 502,213L 496,216L 470,215L 463,212L 459,214L 450,213L 450,207L 445,203L 436,205L 428,207L 422,211L 415,216L 412,218L 405,217L 400,220L 397,224L 397,228L 397,235L 395,241L 395,247L 398,252L 399,259L 401,264L 404,270L 403,277L 403,283L 405,283L 409,281L 414,283L 422,288L 425,294L 428,293L 430,292L 436,294L 439,297L 444,300L 448,304L 453,307L 459,309L 461,307L 467,313L 471,311L 474,310L 479,312L 483,309L 491,310L 496,314L 498,315 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Germania_de_Est" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_9" Width="51" Height="87.4445" Canvas.Left="353" Canvas.Top="208.556" Stretch="Fill" Fill="#0000C800" Data="F1 M 353,291L 355,284L 355,281L 355,273L 357,266L 358,260L 360,250C 360,250 362,236 361,235C 360,234 361,221 361,221L 368,216L 373,211L 377,215L 380,213L 383,209C 383,209 389,208 389,209C 389,210 389,214 389,214L 385,217L 388,220L 389,224L 391,227C 391,227 394,228 395,228C 396,228 397,239 397,239L 394,243L 394,246L 398,251L 398,255L 399,261L 401,266L 404,270L 404,284L 401,284L 399,279C 399,279 394,279 395,279C 396,279 391,284 391,284L 387,286L 384,288L 380,291L 374,294L 371,294L 368,293L 368,295L 367,296L 358,296L 353,295L 353,291 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Germania_de_Vest" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_10" Width="98" Height="143" Canvas.Left="293" Canvas.Top="204" Stretch="Fill" Fill="#0000C800" Data="F1 M 353,295L 354,286L 355,281L 356,273L 357,266L 358,260L 359,254L 360,251L 361,223L 352,222L 355,218L 356,217L 355,214L 349,214L 345,214L 341,213L 340,207L 339,204L 336,204L 331,204L 327,204L 328,209L 326,215L 328,219L 330,223L 330,225L 326,226L 323,231L 321,233C 321,233 320,231 320,230C 320,229 317,227 317,227L 311,228L 308,231L 309,235L 311,237C 311,237 308,237 308,238C 308,239 305,245 305,245L 302,249L 303,252L 305,254L 307,255L 304,258L 303,261L 300,265L 295,264L 293,267L 294,269L 294,278L 293,280L 293,287L 296,289L 296,293L 297,297L 297,301L 297,305C 297,305 298,307 298,308C 298,309 301,312 301,312L 305,315L 311,316L 315,317C 315,317 322,318 317,324C 312,330 313,332 313,332L 313,339L 313,344L 321,344L 326,342L 329,342L 332,344L 335,346L 339,346L 341,344L 344,346L 347,347L 352,343L 358,347L 365,343L 380,342L 379,337C 379,337 378,336 378,335C 378,334 383,328 383,328L 387,325L 391,323L 386,319L 380,315L 375,309L 373,305C 373,305 373,302 373,301C 373,300 368,298 368,298L 365,296L 357,296L 353,295 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Olanda" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_11" Width="45" Height="52" Canvas.Left="263" Canvas.Top="235" Stretch="Fill" Fill="#0000C800" Data="F1 M 293,287L 289,284L 288,278L 282,275L 276,273L 272,276L 266,276L 263,272L 276,258L 285,242L 292,236L 299,235L 308,238L 305,245L 302,249L 307,255L 300,265L 295,264L 294,269L 294,278L 293,280L 293,287 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Belgia" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_12" Width="41" Height="35" Canvas.Left="255" Canvas.Top="273" Stretch="Fill" Fill="#0000C800" Data="F1 M 290,308L 287,308L 282,304C 282,304 283,298 282,298C 281,298 276,301 276,301C 276,301 273,301 273,300C 273,299 272,295 272,295L 267,292L 263,290L 260,288L 256,286L 255,280L 259,277L 262,275L 264,275L 267,277L 271,277L 274,275L 277,273L 281,273L 284,276L 288,278L 289,283L 289,284C 289,285 293,287 293,287L 296,291L 296,295L 296,297L 294,298C 294,298 293,297 292,298C 291,299 290,300 290,300L 290,304L 290,308 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Franta" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_13" Width="156" Height="154" Canvas.Left="163" Canvas.Top="279" Stretch="Fill" Fill="#0000C800" Data="F1 M 200,415L 205,405L 205,393L 209,385L 208,381L 207,378L 207,375C 207,375 208,374 208,373C 208,372 207,369 207,369L 207,367L 204,366L 201,364L 199,362L 197,359L 195,357L 196,354L 198,352L 195,350L 192,349L 187,347L 180,346L 178,344L 175,342L 172,341L 169,341L 165,338L 163,334L 165,327L 170,326L 176,323L 181,322L 186,323L 188,326L 194,328L 199,325L 202,323L 203,319L 199,314C 199,314 198,312 198,311C 198,310 197,307 197,307L 201,305L 206,308L 208,311L 215,314L 221,311L 224,305L 231,303L 237,300L 240,296L 242,292L 242,285L 246,282L 251,279L 255,280L 256,284L 257,286L 261,287L 264,291L 269,292L 272,294C 272,294 272,300 273,300C 274,300 277,301 277,301L 279,299L 281,298L 282,304L 287,308L 299,309L 303,315L 309,316L 313,317L 318,317L 319,319L 317,323L 315,327L 313,331L 313,344C 313,344 305,343 305,344C 305,345 302,351 302,351L 299,357L 295,361L 294,368L 297,368L 302,365L 304,369L 306,372L 303,375C 303,375 304,380 305,380C 306,380 306,384 306,384L 303,387L 303,390C 303,390 305,390 305,391C 305,392 306,400 306,400C 306,400 307,402 312,402C 317,402 310,401 313,404C 316,407 313,407 313,407L 313,408L 313,409L 312,410L 308,415L 304,416L 300,420L 291,420L 284,419L 276,415L 271,415L 262,420L 261,432L 253,433L 249,433L 244,431L 237,427L 233,425L 226,427L 222,427L 216,425L 211,422L 207,420L 203,418L 200,415 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Spania" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_14" Width="155" Height="120" Canvas.Left="106" Canvas.Top="409" Stretch="Fill" Fill="#0000C800" Data="F1 M 154,529L 146,525L 139,514L 130,514L 130,507C 130,507 137,499 137,498C 137,497 133,493 133,493L 136,484L 132,476L 138,472L 136,465L 138,456L 143,449L 143,442L 138,439L 132,440L 123,440L 120,437L 114,438L 112,429L 106,423L 108,418L 117,417L 119,412L 124,409L 133,413L 141,413L 153,411L 161,414L 168,416L 174,413L 187,414L 200,415L 211,422L 219,425L 229,427L 233,425L 242,431L 251,432L 261,432L 261,439L 249,449L 242,451L 237,452L 227,463L 220,474C 220,474 218,478 218,479C 218,480 223,487 223,487L 219,493L 213,499L 213,505L 205,508L 200,514L 196,518L 180,520L 170,520L 162,523L 154,529 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Portugalia" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_15" Width="38" Height="78" Canvas.Left="105" Canvas.Top="437" Stretch="Fill" Fill="#0000C800" Data="F1 M 132,476L 138,472L 136,465L 138,458L 139,453L 143,449L 143,442L 138,439L 133,440L 126,441L 123,440L 120,437L 115,439L 113,450L 115,453L 112,463C 112,463 108,473 108,474C 108,475 105,483 105,484C 105,485 108,493 108,493L 113,495L 112,512C 112,512 112,515 113,515C 114,515 129,515 129,515L 130,507L 137,498L 133,493L 136,484L 132,476 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Anglia" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_16" Width="104" Height="181" Canvas.Left="139" Canvas.Top="121" Stretch="Fill" Data="F1 M 158,302L 164,295L 174,296L 178,294L 180,289L 186,288L 190,291L 198,290L 202,287L 207,289L 208,284L 216,286L 225,286L 232,283L 238,280L 238,275L 232,275L 231,269L 234,266L 237,266L 239,261L 242,255L 243,251L 241,246L 236,244L 229,243L 227,246L 223,248L 222,245L 224,239L 221,230L 222,226L 213,211L 208,210L 203,203L 202,196L 201,189L 195,183L 186,180L 181,181L 181,176L 186,176L 188,172L 190,166L 194,158L 202,149L 201,144L 180,143L 171,147L 172,137L 179,135L 182,130L 183,122L 175,121L 173,124L 160,123L 157,130L 154,133L 155,139L 151,142L 151,148L 151,151L 147,151L 146,146L 142,145L 139,149L 141,156L 147,158L 148,164L 144,166L 143,173L 146,175L 151,171L 155,168L 154,175L 150,179L 144,182L 141,184L 143,187L 147,188L 150,185L 150,192L 153,195L 158,187L 159,182L 162,186L 163,191L 161,198L 158,202L 160,207L 165,207L 172,206L 179,203L 179,207L 177,213L 181,218L 186,222L 185,227L 185,231L 185,235L 178,236L 174,236L 168,241L 165,244L 165,247L 170,247L 171,252L 168,256L 161,262L 156,265L 158,270L 168,267L 173,269L 177,271L 184,270L 188,267L 188,273L 183,277L 171,277L 161,289L 153,296L 152,298L 158,302 Z " Stroke="Black" StrokeDashArray="1 0" StrokeMiterLimit="1" ToolTip="Anglia">
+                            <Path.Fill>
+                                <SolidColorBrush Color="#FFFF1100" Opacity="0"/>
+                            </Path.Fill>
+                        </Path>
+                    </Canvas>
+                    <Canvas x:Name="Irlanda" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_17" Width="53" Height="77" Canvas.Left="92.5" Canvas.Top="196.5" Stretch="Fill" StrokeLineJoin="Round" Stroke="#00000000" Fill="#00FFFFFF" Data="F1 M 142,259L 145,247L 145,239L 142,228L 144,222L 143,217L 136,215L 130,219L 125,216L 124,212L 125,207L 128,205L 128,197L 122,198L 116,200L 114,204L 113,208L 117,208L 118,214L 114,217L 109,217L 102,216L 98,220L 99,224L 102,227L 97,233L 102,237L 110,238L 108,242L 103,248L 101,253L 96,256L 93,260L 97,265L 99,267L 99,271L 107,273L 117,269L 128,264L 133,259L 142,259 Z " StrokeMiterLimit="1"/>
+                    </Canvas>
+                    <Canvas x:Name="Danemarca" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_18" Width="59" Height="66" Canvas.Left="317.5" Canvas.Top="143.5" Stretch="Fill" StrokeLineJoin="Round" Stroke="#00000000" Fill="#00FFFFFF" Data="F1 M 336,204L 327,204L 326,199L 325,195L 324,191L 321,189L 318,187L 319,176C 319,176 320,161 321,161C 322,161 329,155 329,155L 337,153L 346,144L 349,153L 348,158L 346,163L 347,168L 354,170L 353,175L 350,178L 344,182L 341,185L 345,187L 350,189L 352,193L 356,196L 358,199L 364,201L 361,195C 361,195 357,186 357,187C 357,188 360,183 360,183L 364,179C 364,179 369,180 370,180C 371,180 374,182 374,182L 376,189L 375,195L 370,200C 370,200 367,201 368,201C 369,201 370,204 370,204L 369,208L 366,209L 360,209L 354,206L 352,202L 347,199L 342,193L 339,190L 337,193L 336,204 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Norvegia" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_19" Width="97" Height="138" Canvas.Left="280.5" Canvas.Top="-0.499939" Stretch="Fill" StrokeLineJoin="Round" Stroke="#00000000" Fill="#0009FD09" Data="F1 M 353,109C 354,109 345,107 345,107L 341,109L 338,114L 329,125L 316,134L 311,137L 300,133L 289,123L 284,117L 283,80.0001L 281,70.0001L 284,38.0001L 296,29.0001C 296,29.0001 300,25 300,24.0001C 300,23.0001 305,17.0001 305,17.0001L 313,11.0001L 318,5.00006L 324,2.00006L 325,6.10352e-005L 369,6.10352e-005L 369,2.00006L 369,4.00006L 369,7.00006L 370,12.0001L 372,13.0001L 369,16.0001L 369,25.0001L 368,29.0001L 370,33.0001C 370,33.0001 369,37 369,38.0001C 369,39.0001 369,43.0001 369,43.0001L 371,47.0001L 375,49.0001C 375,49.0001 374,52 375,52.0001C 376,52.0001 377,57.0001 377,57.0001L 373,63.0001L 370,65.0001L 371,70.0001L 374,75.0001L 372,82.0001L 374,86.0001L 373,90L 369,91L 366,93L 363,98L 362,102L 364,104L 363,112L 361,116L 357,115L 353,109 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Suedia" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_20" Width="104" Height="192" Canvas.Left="356.5" Canvas.Top="0.500061" Stretch="Fill" StrokeLineJoin="Round" Stroke="#00000000" Fill="#0009FD09" Data="F1 M 377,192L 393,192L 395,184L 404,175L 414,175L 420,164L 422,171L 425,165L 429,149L 424,154L 425,122L 437,115L 448,105L 452,92L 439,75.0001L 432,71.0001L 431,49.0001L 436,27.0001L 444,17.0001L 453,7.00006L 456.19,4.26538L 460,1.00006L 459,1.00006L 369,1.00006L 369,4.00006L 369,9.00006L 372,13.0001L 369,16.0001L 369,22.0001L 368,27.0001L 368,30.0001L 370,34.0001L 369,38.0001L 368,41.0001L 368,44.0001L 371,47.0001L 373,49.0001L 376,53.0001L 376,60.0001L 373,64.0001L 369,66.0001C 369,66.0001 371,71 372,72.0001C 373,73.0001 373,79.0001 373,79.0001L 371,83.0001L 373,86.0001L 373,90L 366,93L 365,97L 362,100L 364,104L 363,112L 361,116L 357,117L 357,121L 358,129L 362,135L 364,145L 368,157L 370,162L 376,165C 376,165 375,170 374,170C 373,170 373,173 373,173L 373,177C 373,177 373,179 373,180C 373,181 375,183 375,183L 377,192 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Finlanda" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_21" Width="130" Height="93" Canvas.Left="477.5" Canvas.Top="0.5" Stretch="Fill" StrokeLineJoin="Round" Stroke="#00000000" Fill="#0009FD09" Data="F1 M 502,2L 598,1L 607,12.0001L 607,26.0001L 599,38.0001L 584,55.0001L 563,76.0001L 554,77.0001L 547,79.0001L 538,79.0001C 538,79.0001 520,87 520,88C 520,89 512,91 512,91L 503,93L 503,85.0001L 488,78.0001L 480,68.0001L 483,62.0001L 483,56.0001L 485,53.0001L 485,49.0001L 482,46.0001L 481,34.0001L 478,21.0001L 485,13.0001L 487,9.00006L 490.872,8.51593L 495,8.00006L 502,2 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Italia" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_22" Width="146" Height="167" Canvas.Left="302.5" Canvas.Top="352.5" Stretch="Fill" StrokeLineJoin="Round" Stroke="#00000000" Fill="#0009FD09" Data="F1 M 313,408L 312,402L 306,400L 305,391L 303,390L 303,387L 307,381L 303,375L 304,372L 314,373L 320,367L 321,365L 327,370L 332,368L 334,363L 341,365L 344,364L 347,360L 355,357L 369,353L 374,360L 383,362L 386,369L 384,375L 376,380L 370,382L 373,386L 372,394L 374,401L 381,406L 388,413L 392,423L 399,433L 408,439L 413,437L 419,438L 417,444L 423,448L 429,451L 436,456L 443,458L 447,466L 448,473L 443,470L 439,464L 433,464L 429,466L 425,470L 429,476L 430,482L 428,486L 426,489L 425,495L 418,499L 413,499L 409,502L 407,514L 403,519L 395,516L 388,515L 379,510L 374,503L 377,499L 385,499L 390,499L 404,497L 411,495L 414,492L 419,487L 414,472L 406,466L 403,460L 396,458L 391,452L 386,450L 379,449L 366,435L 360,432L 352,421L 346,410L 340,404L 331,400L 320,408L 313,408 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Turcia" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_23" Width="231" Height="97" Canvas.Left="542.5" Canvas.Top="434.5" Stretch="Fill" StrokeLineJoin="Round" Stroke="#00000000" Fill="#0009FD09" Data="F1 M 547,496L 553,489L 548,475L 543,475L 543,463L 548,458L 544,455L 548,447L 547,442L 552,438L 561,441L 564,439L 578,448L 602,452L 620,445L 634,440L 654,435L 658,440L 669,443L 672,449L 678,449L 685,454L 689,452L 701,453L 721,453L 736,443L 748,446L 760,456L 765,466L 770,476L 766,480L 769,489L 770,500L 773,509L 764,511L 753,510L 748,512L 745,514L 741,510L 736,514L 723,513L 721,516L 713,519L 700,519L 694,515L 689,518L 678,519L 673,526L 668,531L 665,530L 665,523L 662,517L 659,522L 649,518L 640,525L 626,529L 601,518L 591,527L 580,524L 574,521L 560,522L 558,513L 555,504L 547,496 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Ucraina" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_24" Width="226" Height="145" Canvas.Left="492.5" Canvas.Top="252.5" Stretch="Fill" StrokeLineJoin="Round" Stroke="#00000000" Fill="#0009FD09" Data="F1 M 569,379L 578,384L 582,381L 587,382C 587,382 590,374 591,374C 592,374 600,368 600,368L 604,362L 609,360L 613,367L 625,370L 633,370L 626,378L 621,380L 629,384C 629,384 631,386 632,387C 633,388 635,393 635,394C 635,395 640,397 640,397C 640,397 650,391 650,392C 650,393 659,388 659,388L 667,388L 670,383L 671,380L 664,379L 661,381L 654,378L 652,371L 662,364L 671,358C 671,358 675,358 676,358C 677,358 684,351 684,351L 693,350L 694,342L 700,339L 700,336L 705,337L 710,337L 714,331L 711,326L 711,321L 714,318L 714,316L 717,314L 718,308C 718,308 717,306 716,306C 715,306 708,304 708,304L 705,301L 699,300L 690,298L 683,289L 674,292C 674,292 670,291 669,291C 668,291 661,289 661,289L 658,283L 655,278L 652,275L 645,274L 642,267L 645,264L 644,260L 637,254L 624,253C 624,253 619,257 619,258C 619,259 612,258 612,258L 604,260L 599,268L 599,275L 591,273L 582,272L 580,270L 578,271L 575,273L 570,271L 562,271L 556,268L 547,266L 533,263L 523,263L 517,267L 510,269L 511,275L 515,283L 516,292L 509,296L 504,304L 501,310L 500,315L 495,316L 494,321L 493,328L 497,334L 502,338L 513,337L 517,336L 525,340L 531,337C 531,337 535,336 536,336C 537,336 545,333 545,333L 553,328L 557,326C 557,326 562,329 563,329C 564,329 569,333 569,333L 577,333L 579,335L 579,341L 583,347L 587,352L 589,355L 589,364L 579,364L 577,370C 577,370 576,372 575,373C 574,374 569,379 569,379 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Belarus" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_25" Width="121" Height="101" Canvas.Left="505.5" Canvas.Top="175.5" Stretch="Fill" StrokeLineJoin="Round" Stroke="#00000000" Fill="#0009FD09" Data="F1 M 580,270C 580,270 582,271 583,272C 584,273 589,273 589,273L 593,275L 597,276L 600,265L 606,260L 612,258L 613,253L 609,242L 608,237L 613,236L 616,238L 622,235L 626,230L 620,224L 615,225L 610,217L 605,211L 601,203L 604,197C 604,197 603,189 602,189C 601,189 590,182 590,182L 587,184C 587,184 583,184 583,183C 583,182 584,179 584,179L 577,178L 570,176L 562,184L 555,185L 549,188C 549,188 547,192 548,192C 549,192 550,196 550,196L 548,200L 542,201L 539,204L 537,208L 539,216L 539,219L 532,217L 526,220L 519,222L 511,223C 511,223 512,232 512,233C 512,234 513,240 513,240L 514,249C 514,249 508,252 508,253C 508,254 506,255 506,255L 510,260L 510,269L 515,268L 521,263L 532,264C 532,264 540,264 541,264C 542,264 547,267 548,267C 549,267 557,269 557,269L 563,271L 567,269C 567,269 573,270 573,271C 573,272 578,272 578,272L 580,270 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Lituania" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_26" Width="72" Height="52.28" Canvas.Left="477.5" Canvas.Top="170.5" Stretch="Fill" StrokeLineJoin="Round" Stroke="#00000000" Fill="#0009FD09" Data="F1 M 501,212L 503,206C 503,206 502,201 501,201C 500,201 497,199 496,199C 495,199 490,198 490,198L 482,195C 482,195 479,189 480,188C 481,187 478,182 478,182L 479,178L 483,176C 483,176 489,172 490,172C 491,172 512,171 512,171L 518,173C 518,173 523,171 524,171C 525,171 529,171 529,171L 531,175L 537,177L 544,182L 549,187L 547,192L 546,196L 541,200L 538,206L 537,213L 538,218L 535,217L 532,217L 528,219L 525,222L 518,222C 518,222 514,221 513,222C 512,223 510,221 510,221L 510,217L 506,217L 501,212 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Letonia" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_27" Width="93" Height="54.1605" Canvas.Left="478.5" Canvas.Top="133.34" Stretch="Fill" StrokeLineJoin="Round" Stroke="#00000000" Fill="#0009FD09" Data="F1 M 479,178C 480,177 493,171 493,171C 493,171 512,171 513,171C 514,171 519,174 520,174C 521,174 528,171 528,171L 531,175L 538,176L 549,187C 549,187 555,187 555,185C 555,183 560,184 560,184L 565,177L 571,174L 567,164L 563,155C 563,155 563,150 563,149C 563,148 558,144 558,144L 551,145L 545,143L 538,137C 538,137 532,133 531,134C 530,135 523,138 523,138C 523,138 520,146 520,147C 520,148 519,153 519,153C 519,153 513,155 513,156C 513,157 507,155 507,154C 507,153 501,147 501,146C 501,145 496,140 496,140L 487,145L 485,151L 482,157L 479,167L 479,178 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Estonia" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_28" Width="61" Height="49" Canvas.Left="507.5" Canvas.Top="96.5" Stretch="Fill" StrokeLineJoin="Round" Stroke="#00000000" Fill="#0009FD09" Data="F1 M 521,137L 522,130L 514,129L 509,124L 512,117C 512,117 508,112 508,111C 508,110 513,105 513,105L 523,102L 529,99L 532,101L 534,97L 541,97L 544,100L 552,103L 562,102L 565,99L 568,101L 565,110L 563,115L 564,124L 560,129C 560,129 563,133 564,133C 565,133 568,137 568,137L 562,139L 558,143L 550,145L 540,137L 530,136L 523,140L 521,137 Z "/>
+                    </Canvas>
+                    <Canvas x:Name="Rusia" Width="781" Height="600" Canvas.Left="0" Canvas.Top="0" MouseLeftButtonDown="Anglia_MouseLeftButtonDown">
+                        <Path x:Name="Path_29" Width="223" Height="456" Canvas.Left="557.5" Canvas.Top="0.5" Stretch="Fill" StrokeLineJoin="Round" Stroke="#00000000" Fill="#0009FD09" Data="F1 M 598,1L 779,2L 780,453L 760,456C 760,456 747,448 748,446C 749,444 744,445 744,445L 734,445L 735,432L 730,424L 715,416L 703,406L 699,402L 676,387L 675,382L 683,380L 686,373L 690,369L 696,367L 688,360L 694,357L 701,352L 706,350L 699,347L 694,346L 693,339C 693,339 700,342 700,339C 700,336 710,337 710,337L 712,330L 711,323L 714,318C 714,318 718,316 717,314C 716,312 718,308 718,308L 710,303L 705,299L 699,300L 692,297L 690,298L 683,289L 672,292L 658,288L 659,281L 655,278L 645,274L 642,267L 645,262L 640,254L 627,256L 616,259L 607,239L 608,237L 620,237L 626,230L 622,224L 615,225L 612,217L 601,203L 604,197L 602,189L 594,182L 587,184L 585,184L 584,179L 577,178L 569,174L 567,164L 563,155L 563,149L 558,143L 565,139L 568,137L 562,131L 564,124L 565,112L 568,105L 565,99L 565,94L 569,95L 579,91L 588,92L 590,85.0001L 583,84.0001L 578,85.0001L 570,80.0001L 563,76.0001L 568,71.0001L 577,62.0001L 587,54.0001L 595,41.0001L 603,31.0001L 609,21.0001L 607,15.0001L 604,7.00006L 598,1 Z "/>
+                    </Canvas>
+                </Canvas>
+
+            </Viewbox>
+        </Grid>
+        <Grid Visibility="Visible" x:Name="introduce">
+            <Grid.Background>
+                <ImageBrush Opacity="0.3" ImageSource="Resources/world-war-2-tank-background-vector.jpg"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0"   HorizontalAlignment="Center" FontFamily="Modern No. 20" FontSize="36" Margin="0,30,0,0"><Run Text="Al Doilea Război Mondial"/></TextBlock>
+            <!--<Label MouseLeftButtonDown="Label_MouseLeftButtonDown_1" Margin="40">Inchide program</Label>-->
+            <ScrollViewer Grid.Row="1">
+                <StackPanel >
+                    <Border Background="#FFA4DEFF" Width="660" BorderThickness="0,20,0,0" Margin="4,0">
+                        <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="23" Margin="3" ToolTip="Care se află în stare de război" FontWeight="Bold"><Run Text="Beligeranți"/></TextBlock>
+                    </Border>
+                    <Grid Width="660" Margin="0,10,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border BorderThickness="0,0,1,0" BorderBrush="Black" Grid.Column="0">
+                            <StackPanel  x:Name="aliatii">
+                                <Expander  FontFamily="Arial" FontSize="20" IsExpanded="True" >
+                                    <Expander.Header >
+                                        <TextBlock Margin="100,0,0,0" HorizontalAlignment="Center" TextDecorations="Underline" ><Run Text="Aliatii"/></TextBlock>
+                                    </Expander.Header>
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_the_Soviet_Union_(1923-1955).svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Uniunea Sovietică (1941-1945)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_the_United_Kingdom.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Regatul Unit (1940-1944)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/US_flag_48_stars.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Statele Unite ale Americii (1941-1945)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/22px-Flag_of_the_Republic_of_China.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="China (1937-1945)"/></TextBlock>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Expander>
+                                <Expander Margin="0,96,0,0" FontFamily="Arial" FontSize="20" IsExpanded="False" IsHitTestVisible="True" HorizontalContentAlignment="Center" Grid.IsSharedSizeScope="True">
+                                    <Expander.Header >
+                                        <TextBlock Margin="60,0,0,0" HorizontalAlignment="Left" TextDecorations="Underline" ToolTip="Care se află în război alături de un aliat contra unui inamic comun" ><Run Text="Cobeligeranți:"/></TextBlock>
+                                    </Expander.Header>
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_Poland.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Polonia (1939-1945)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_Free_France_(1940-1944).svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Franța (1939-1945)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Canadian_Red_Ensign_(1957-1965).svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Canada (1939-1945)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/22px-Flag_of_Australia.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Australia (1939-1945)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_New_Zealand.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Noua Zeelandă (1939-1945)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/22px-Flag_of_Finland_(bordered).svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Finlanda (1939-1940) și (1944-1945)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_the_Netherlands.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Olanda (1939-1945)"/></TextBlock>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Belgia (1939-1945)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/State_Flag_of_Greece_(1863-1924_and_1935-1970).svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Grecia (1939-1945)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_the_Kingdom_of_Yugoslavia.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Iugoslavia (1941-1945)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/22px-Flag_of_Italy_(1861-1946)_crowned.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Italia (1943-1945)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_Romania.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="România (1944-1945)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_Bulgaria.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Bulgaria (1944-1945)"/></TextBlock>
+                                        </StackPanel>
+
+                                    </StackPanel>
+                                </Expander>
+                            </StackPanel>
+                        </Border>
+                        <Border BorderThickness="1,0,0,0" BorderBrush="Black" Grid.Column="1">
+                            <StackPanel  x:Name="axa">
+                                <Expander  FontFamily="Arial" FontSize="20" IsExpanded="True" IsHitTestVisible="True" HorizontalContentAlignment="Center" Grid.IsSharedSizeScope="True">
+                                    <Expander.Header >
+                                        <TextBlock Margin="60,0,0,0" HorizontalAlignment="Left" TextDecorations="Underline" ><Run Text="Axa și aliații săi"/></TextBlock>
+                                    </Expander.Header>
+                                    <StackPanel>
+
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_the_German_Reich_(1935–1945).svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Germania Nazistă"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/22px-Naval_Ensign_of_Japan.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Imperiul Japonez"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/22px-Flag_of_Italy_(1861-1946)_crowned.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Italia (1940-1943)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_Romania.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="România (1941-1944)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_Hungary_(1915-1918,_1919-1946).svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Ungaria (1941-1945)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_Bulgaria.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Bulgaria (1941-1944)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/22px-Flag_of_Finland_(bordered).svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Finlanda (1941-1944)"/></TextBlock>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Expander>
+                                <Expander Margin="0,20,0,0"  FontFamily="Arial" FontSize="20" IsExpanded="False" IsHitTestVisible="True" HorizontalContentAlignment="Center" Grid.IsSharedSizeScope="True">
+                                    <Expander.Header >
+                                        <TextBlock Margin="60,0,0,0" HorizontalAlignment="Left" TextDecorations="Underline" ToolTip="Care se află în război alături de un aliat contra unui inamic comun" ><Run Text="Cobeligeranți:"/></TextBlock>
+                                    </Expander.Header>
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_France.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Franța Colaboraționistă (1940-1945)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_the_Soviet_Union_(1923-1955).svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Uniunea Sovietică (1939-1941)"/></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="Resources/Flag/Flag_of_Thailand.svg.png"/>
+                                            <TextBlock HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" TextWrapping="Wrap" Margin="2"><Run Text="Tailanda (1942-1945)"/></TextBlock>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Expander>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        <Grid Visibility="Hidden" x:Name="cronologie" Background="#FFF7F7F7">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+                    <TextBlock FontSize="30"><Run Text="Anul:"/></TextBlock>
+                    <ComboBox  Name="anul_cb" Margin="10,0,0,0" Width="100" Height="50" FontSize="30" VerticalAlignment="Top" SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged_1">
+                        <ComboBoxItem FontSize="30" Content="1939"/>
+                        <ComboBoxItem FontSize="30" Content="1940"/>
+                        <ComboBoxItem FontSize="30" Content="1941"/>
+                        <ComboBoxItem FontSize="30" Content="1942"/>
+                        <ComboBoxItem FontSize="30" Content="1943"/>
+                        <ComboBoxItem FontSize="30" Content="1944"/>
+                        <ComboBoxItem FontSize="30" Content="1945"/>
+                    </ComboBox>
+                <Image Height="50" VerticalAlignment="Top" Margin="20,0,0,0" Source="Resources/ok.png" MouseLeftButtonDown="Image_MouseLeftButtonDown_1"/>
+            </StackPanel>
+                <ScrollViewer Name="anul_1939" Visibility="Hidden" Margin="0,80,0,0">
+                    <StackPanel>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="30,20,0,0">
+                                <Border BorderThickness="0.6" Width="100" Height="60" BorderBrush="#FF727272" CornerRadius="1">
+                                    <StackPanel Width="100" Height="60">
+                                        <TextBlock FontSize="15" Margin="5,3,0,0" Foreground="#FF3C3C3C"><Run Text="2 Ianuarie"/></TextBlock>
+                                        <TextBlock FontSize="30" Margin="5,-5,0,0" Foreground="#FF363636"><Run Text="1939"/></TextBlock>
+                                    </StackPanel>
+                                </Border>
+                                <TextBlock VerticalAlignment="Bottom" Margin="10,0,0,0" FontSize="30" TextWrapping="Wrap" Foreground="Black"><Run Text="Revista TIME l-a numit pe Hitler Omul Anului"/></TextBlock>
+                            </StackPanel>
+                            <TextBlock TextWrapping="Wrap" Margin="140,0,0,0" FontSize="20" Foreground="#FF616161">Revista americană Time Magazine are o tradiție veche: la începutul fiecărui an, publică o ediție despre „Omul Anului”. Tradiția, începută în 1927 cu aviatorul Charles Lindbergh, continuă până în zilele noastre. Desemnarea este considerată, de regulă, o onoare, fiind alese persoane cu contribuții importante în viața politică, economică sau socială din lume. Însă în 1938, revista Time l-a numit „Omul Anului” pe dictatorul german Adolf Hitler.</TextBlock>
+                        </StackPanel>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="30,20,0,0">
+                                <Border BorderThickness="0.6" Width="100" Height="60" BorderBrush="#FF727272" CornerRadius="1">
+                                    <StackPanel Width="100" Height="60">
+                                        <TextBlock FontSize="15" Margin="5,3,0,0" Foreground="#FF3C3C3C"><Run Text="15 Martie"/></TextBlock>
+                                        <TextBlock FontSize="30" Margin="5,-5,0,0" Foreground="#FF363636"><Run Text="1939"/></TextBlock>
+                                    </StackPanel>
+                                </Border>
+                                <TextBlock VerticalAlignment="Bottom" Margin="10,0,0,0" FontSize="30" TextWrapping="Wrap" Foreground="Black"><Run Text="Hitler anexeaza Cehoslovacia"/></TextBlock>
+                            </StackPanel>
+                            <TextBlock TextWrapping="Wrap" Margin="140,0,0,0" FontSize="20" Foreground="#FF616161">În ziua de 15 martie 1939, trupele germane au ocupat Boemia și Moravia. Statul cehoslovac a dispărut de pe harta politică a Europei pentru aproape șase ani. Au fost înființate statul-marionetă Protectoratul Boemiei și Moraviei, care era sub controlul total al Germaniei Naziste, și Republica Slovacia, stat satelit al Reichului, dar care nu a fost ocupat de trupele germane.</TextBlock>
+                        </StackPanel>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="30,20,0,0">
+                                <Border BorderThickness="0.6" Width="100" Height="60" BorderBrush="#FF727272" CornerRadius="1">
+                                    <StackPanel Width="100" Height="60">
+                                        <TextBlock FontSize="15" Margin="5,3,0,0" Foreground="#FF3C3C3C"><Run Text="1 Septembrie"/></TextBlock>
+                                        <TextBlock FontSize="30" Margin="5,-5,0,0" Foreground="#FF363636"><Run Text="1939"/></TextBlock>
+                                    </StackPanel>
+                                </Border>
+                                <TextBlock VerticalAlignment="Bottom" Margin="10,0,0,0" FontSize="30" TextWrapping="Wrap" Foreground="Black"><Run Text="Invadarea Poloniei"/></TextBlock>
+                            </StackPanel>
+                            <TextBlock TextWrapping="Wrap" Margin="140,0,0,0" FontSize="20" Foreground="#FF616161">Invadarea Poloniei a început la ora 4:30 dimineața cu un atac al aviației militare germane împotriva mai multor ținte din Polonia. Regatul Unit și Franța au cerut imediata retragere a trupelor germane.</TextBlock>
+                        </StackPanel>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="30,20,0,0">
+                                <Border BorderThickness="0.6" Width="100" Height="60" BorderBrush="#FF727272" CornerRadius="1">
+                                    <StackPanel Width="100" Height="60">
+                                        <TextBlock FontSize="15" Margin="5,3,0,0" Foreground="#FF3C3C3C"><Run Text="3 Septembrie"/></TextBlock>
+                                        <TextBlock FontSize="30" Margin="5,-5,0,0" Foreground="#FF363636"><Run Text="1939"/></TextBlock>
+                                    </StackPanel>
+                                </Border>
+                                <TextBlock VerticalAlignment="Bottom" Margin="10,0,0,0" FontSize="30" TextWrapping="Wrap" Foreground="Black"><Run Text="Regatul Unit și Franța au declarat război Germaniei Naziste"/></TextBlock>
+                            </StackPanel>
+                            <TextBlock TextWrapping="Wrap" Margin="140,0,0,0" FontSize="20" Foreground="#FF616161">Regatul Unit și Franța au declarat război Germaniei Naziste, după refuzul acesteia din urmă să se retragă din Polonia.</TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+                <ScrollViewer Name="anul_1940" Visibility="Visible" Margin="0,80,0,0">
+                    <StackPanel Name="m_stack">
+                        
+                    </StackPanel>
+                </ScrollViewer>
+                <!--
+                            <TextBlock Margin="45,0,0,0" FontWeight="Bold">15 Martie</TextBlock>
+                            <Expander Margin="20,5,0,15">
+                                <Expander.Header>
+                                    <TextBlock FontSize="20" TextWrapping="Wrap" Foreground="Black">Hitler anexeaza Cehoslovacia</TextBlock>
+                                </Expander.Header>
+                                <TextBlock Margin="20,5,0,0" FontSize="16" TextWrapping="Wrap" Foreground="#FF4D4D4D">În ziua de 15 martie 1939, trupele germane au ocupat Boemia și Moravia. Statul cehoslovac a dispărut de pe harta politică a Europei pentru aproape șase ani. Au fost înființate statul-marionetă Protectoratul Boemiei și Moraviei, care era sub controlul total al Germaniei Naziste, și Republica Slovacia, stat satelit al Reichului, dar care nu a fost ocupat de trupele germane.</TextBlock>
+                            </Expander>
+                            <TextBlock Margin="45,0,0,0" FontWeight="Bold">1 Septembrie</TextBlock>
+                            <Expander Margin="20,5,0,15">
+                                <Expander.Header>
+                                    <TextBlock FontSize="20" TextWrapping="Wrap" Foreground="Black">Invadarea Poloniei</TextBlock>
+                                </Expander.Header>
+                                <TextBlock Margin="20,5,0,0" FontSize="16" TextWrapping="Wrap" Foreground="#FF4D4D4D">Invadarea Poloniei a început la ora 4:30 dimineața cu un atac al aviației militare germane împotriva mai multor ținte din Polonia. Regatul Unit și Franța au cerut imediata retragere a trupelor germane.</TextBlock>
+                            </Expander>
+                            <TextBlock Margin="45,0,0,0" FontWeight="Bold">3 Septembrie</TextBlock>
+                            <Expander Margin="20,5,0,15">
+                                <Expander.Header>
+                                    <TextBlock FontSize="20" TextWrapping="Wrap" Foreground="Black"> Regatul Unit și Franța au declarat război Germaniei Naziste</TextBlock>
+                                </Expander.Header>
+                                <TextBlock Margin="20,5,0,0" FontSize="16" TextWrapping="Wrap" Foreground="#FF4D4D4D">Regatul Unit și Franța au declarat război Germaniei Naziste, după refuzul acesteia din urmă să se retragă din Polonia.</TextBlock>
+                            </Expander>
+                            <TextBlock Margin="45,0,0,0" FontWeight="Bold">28 Septembrie</TextBlock>
+                            <Expander Margin="20,5,0,15">
+                                <Expander.Header>
+                                    <TextBlock FontSize="20" TextWrapping="Wrap" Foreground="Black">Varșovia a capitulat</TextBlock>
+                                </Expander.Header>
+                                <TextBlock Margin="20,5,0,0" FontSize="16" TextWrapping="Wrap" Foreground="#FF4D4D4D">Varșovia a capitulat în fața germanilor.</TextBlock>
+                            </Expander>
+                            <TextBlock Margin="45,0,0,0" FontWeight="Bold">9 Octombrie</TextBlock>
+                            <Expander Margin="20,5,0,15">
+                                <Expander.Header>
+                                    <TextBlock FontSize="20" TextWrapping="Wrap" Foreground="Black">Hitler a dat ordine pentru pregătirea invaziei în Belgia, Franța, Luxemburg și Olanda.</TextBlock>
+                                </Expander.Header>
+                                <TextBlock Margin="20,5,0,0" FontSize="16" TextWrapping="Wrap" Foreground="#FF4D4D4D">Hitler a dat ordine pentru pregătirea invaziei în Belgia, Franța, Luxemburg și Olanda.</TextBlock>
+                            </Expander>
+                            <TextBlock Margin="45,0,0,0" FontWeight="Bold">1 Decembrie</TextBlock>
+                            <Expander Margin="20,5,0,15">
+                                <Expander.Header>
+                                    <TextBlock FontSize="20" TextWrapping="Wrap" Foreground="Black">Evreii au fost forțați să poarte semnul distinctiv Steaua lui David.</TextBlock>
+                                </Expander.Header>
+                                <TextBlock Margin="20,5,0,0" FontSize="16" TextWrapping="Wrap" Foreground="#FF4D4D4D">Evreii au fost forțați să poarte semnul distinctiv Steaua lui David.</TextBlock>
+                            </Expander>
+                            <TextBlock Margin="45,0,0,0" FontWeight="Bold">x</TextBlock>
+                            <Expander Margin="20,5,0,15">
+                                <Expander.Header>
+                                    <TextBlock FontSize="20" TextWrapping="Wrap" Foreground="#FF473EFF">x</TextBlock>
+                                </Expander.Header>
+                                <TextBlock Margin="20,5,0,0" FontSize="16" TextWrapping="Wrap" Foreground="#FF4D4D4D">x</TextBlock>
+                            </Expander>
+                            <TextBlock Margin="45,0,0,0" FontWeight="Bold">x</TextBlock>
+                            <Expander Margin="20,5,0,15">
+                                <Expander.Header>
+                                    <TextBlock FontSize="20" TextWrapping="Wrap" Foreground="#FF473EFF">x</TextBlock>
+                                </Expander.Header>
+                                <TextBlock Margin="20,5,0,0" FontSize="16" TextWrapping="Wrap" Foreground="#FF4D4D4D">x</TextBlock>
+                            </Expander>-->
+        </Grid>
+    </Grid>
+</Window>

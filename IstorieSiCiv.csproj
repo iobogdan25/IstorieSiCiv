@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{206F5573-BC9F-407B-A287-76117F2D2714}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Istorie</RootNamespace>
+    <AssemblyName>Istorie</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>05898F594E515CDE850F8E7FC389BA890C8649DB</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>IstorieSiCiv_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AdaugaLectie.xaml.cs">
+      <DependentUpon>AdaugaLectie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AlegeLectie.xaml.cs">
+      <DependentUpon>AlegeLectie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComenziInfo.xaml.cs">
+      <DependentUpon>ComenziInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cronologie.xaml.cs">
+      <DependentUpon>Cronologie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CuvantRebus.cs" />
+    <Compile Include="IncarcaRebus.xaml.cs">
+      <DependentUpon>IncarcaRebus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lectie.cs" />
+    <Compile Include="Rebus.xaml.cs">
+      <DependentUpon>Rebus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reguli.xaml.cs">
+      <DependentUpon>Reguli.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RevolutiaIndustriala.xaml.cs">
+      <DependentUpon>RevolutiaIndustriala.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Statistica.xaml.cs">
+      <DependentUpon>Statistica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TestareLectie.xaml.cs">
+      <DependentUpon>TestareLectie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VizualizareLectie.xaml.cs">
+      <DependentUpon>VizualizareLectie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RazboiMondial2.xaml.cs">
+      <DependentUpon>RazboiMondial2.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AdaugaLectie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AlegeLectie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComenziInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConsolidareSUA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cronologie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Duel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exersare.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GenerareIntrebareGrila.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IncarcaRebus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListLectii.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConsolidareSUA.xaml.cs">
+      <DependentUpon>ConsolidareSUA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Duel.xaml.cs">
+      <DependentUpon>Duel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exersare.xaml.cs">
+      <DependentUpon>Exersare.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generale.cs" />
+    <Compile Include="GenerareIntrebareGrila.xaml.cs">
+      <DependentUpon>GenerareIntrebareGrila.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InformatiiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformatiiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IntrebareGrila.cs" />
+    <Compile Include="ListLectii.xaml.cs">
+      <DependentUpon>ListLectii.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Rebus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reguli.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RevolutiaIndustriala.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Statistica.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TestareLectie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VizualizareLectie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RazboiMondial2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="InformatiiDataSet.xsc">
+      <DependentUpon>InformatiiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InformatiiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InformatiiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InformatiiDataSet.xss">
+      <DependentUpon>InformatiiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Duel.png" />
+    <Resource Include="Resources\Learn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Endless.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\historyLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\grey-background-for-site-for-website-1432015867.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\refreshButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\info-logo-icon-75678.png" />
+    <Resource Include="Resources\Taste\computer-key-r-http-www-wpclipart-com-computer-keyboard-keys-z6FZhr-clipart.png" />
+    <Resource Include="Resources\war_logo.png" />
+    <Resource Include="Resources\book_logo.png" />
+    <Resource Include="Resources\ok.png" />
+    <Resource Include="Resources\stop-button_318-28623.jpg" />
+    <Resource Include="Resources\play-button_318-42541.jpg" />
+    <Resource Include="Resources\Flag\22px-Flag_of_Australia.svg.png" />
+    <Resource Include="Resources\Flag\22px-Flag_of_Finland_%28bordered%29.svg.png" />
+    <Resource Include="Resources\Flag\22px-Flag_of_Italy_%281861-1946%29_crowned.svg.png" />
+    <Resource Include="Resources\Flag\22px-Flag_of_the_Republic_of_China.svg.png" />
+    <Resource Include="Resources\Flag\22px-Naval_Ensign_of_Japan.svg.png" />
+    <Resource Include="Resources\Flag\Canadian_Red_Ensign_%281957-1965%29.svg.png" />
+    <Resource Include="Resources\Flag\Flag_of_Belgium.svg.png" />
+    <Resource Include="Resources\Flag\Flag_of_Bulgaria.svg.png" />
+    <Resource Include="Resources\Flag\Flag_of_France.svg.png" />
+    <Resource Include="Resources\Flag\Flag_of_Free_France_%281940-1944%29.svg.png" />
+    <Resource Include="Resources\Flag\Flag_of_Hungary_%281915-1918,_1919-1946%29.svg.png" />
+    <Resource Include="Resources\Flag\Flag_of_New_Zealand.svg.png" />
+    <Resource Include="Resources\Flag\Flag_of_Poland.svg.png" />
+    <Resource Include="Resources\Flag\Flag_of_Romania.svg.png" />
+    <Resource Include="Resources\Flag\Flag_of_Thailand.svg.png" />
+    <Resource Include="Resources\Flag\Flag_of_the_German_Reich_%281935–1945%29.svg.png" />
+    <Resource Include="Resources\Flag\Flag_of_the_Kingdom_of_Yugoslavia.svg.png" />
+    <Resource Include="Resources\Flag\Flag_of_the_Netherlands.svg.png" />
+    <Resource Include="Resources\Flag\Flag_of_the_Soviet_Union_%281923-1955%29.svg.png" />
+    <Resource Include="Resources\Flag\Flag_of_the_United_Kingdom.svg.png" />
+    <Resource Include="Resources\Flag\State_Flag_of_Greece_%281863-1924_and_1935-1970%29.svg.png" />
+    <Resource Include="Resources\Flag\US_flag_48_stars.svg.png" />
+    <Resource Include="Resources\world-war-2-tank-background-vector.jpg" />
+    <Resource Include="Resources\World-War-II-l1.jpg" />
+    <Resource Include="1945_files\image0.png" />
+    <Content Include="Informatii.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Informatii_log.ldf">
+      <DependentUpon>Informatii.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\logo_rebus.gif" />
+    <Resource Include="Resources\stats-logo.png" />
+    <Resource Include="Resources\Taste\37-computer_key_D.png" />
+    <Resource Include="Resources\calendar-512.png" />
+    <Resource Include="Resources\Taste\1-computer_key_F.png" />
+    <Resource Include="Resources\Taste\100-computer_key_K.png" />
+    <Resource Include="Resources\Taste\2-computer_key_E.png" />
+    <Resource Include="Resources\Taste\25-computer_key_P.png" />
+    <Resource Include="Resources\Taste\30-computer_key_X.png" />
+    <Resource Include="Resources\Taste\34-computer_key_O.png" />
+    <Resource Include="Resources\Taste\47-computer_key_A.png" />
+    <Resource Include="Resources\Taste\50-computer_key_F.png" />
+    <Resource Include="Resources\Taste\52-computer_key_S.png" />
+    <Resource Include="Resources\Taste\9-computer_key_I.png" />
+    <Resource Include="Resources\Taste\94-computer_key_U.png" />
+    <Resource Include="Resources\Barrow_Steelworks.jpg" />
+    <Resource Include="Resources\primul-automobil-din-lume-este-un-benz-din-18861342605921.jpg" />
+    <Resource Include="Resources\d14ccfea480f9236250a119f41b50c140d82803b.jpg" />
+    <Resource Include="Resources\fonograful-lui-Thomas-Edison.jpg" />
+    <Resource Include="Resources\6a00d83451c56869e200e54f4578b88833-640wi.jpg" />
+    <Resource Include="Resources\prima-fotografie.jpg" />
+    <Resource Include="Resources\Stephenson%27s_Rocket.jpg" />
+    <Resource Include="Resources\American_progress.JPG" />
+    <Resource Include="Resources\800px-War_of_1812_Montage.jpg" />
+    <Resource Include="Resources\drapel-steag-fanion-america-sua.jpg" />
+    <Resource Include="Resources\chainimage-old-paper-background-old-paper-background.jpg" />
+    <Resource Include="Resources\paper-backgrounds.jpg" />
+    <Resource Include="Resources\Thomas_Jefferson_by_Rembrandt_Peale,_1800.jpg" />
+    <Resource Include="Resources\Gilbert_Stuart,_George_Washington_%28Lansdowne_portrait,_1796%29.jpg" />
+    <Resource Include="Resources\Heart.ico" />
+    <Resource Include="Resources\wrong.png" />
+    <Resource Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Win32_TPMLib">
+      <Guid>{61E207A5-827C-42E9-ADFA-165C6A745EE4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

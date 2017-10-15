@@ -1,0 +1,40 @@
+﻿<Window x:Class="Istorie.GenerareIntrebareGrila"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GenerareIntrebareGrila" Height="300" Width="430">
+    <Grid>
+        <StackPanel Margin="4">
+            <Label>Intrebare:</Label>
+            
+            <RichTextBox Name="intrebare" Height="60" >
+                <RichTextBox.Resources>
+                    <Style TargetType="{x:Type Paragraph}">
+                        <Setter Property="LineHeight" Value="0.1"/>
+                    </Style>
+                </RichTextBox.Resources>
+            </RichTextBox>
+            <StackPanel Orientation="Horizontal">
+                <Label>Raspuns 1 :</Label>
+                <TextBox Name="raspuns_1" Width="200"></TextBox>
+                <CheckBox Margin="20,0,0,0" VerticalAlignment="Center" Name="varianta_1">Varianta corecta</CheckBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>Raspuns 2 :</Label>
+                <TextBox Name="raspuns_2" Width="200"></TextBox>
+                <CheckBox Margin="20,0,0,0" VerticalAlignment="Center" Name="varianta_2">Varianta corecta</CheckBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>Raspuns 3 :</Label>
+                <TextBox Name="raspuns_3" Width="200"></TextBox>
+                <CheckBox Margin="20,0,0,0" VerticalAlignment="Center" Name="varianta_3">Varianta corecta</CheckBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>Raspuns 4 :</Label>
+                <TextBox Name="raspuns_4" Width="200"></TextBox>
+                <CheckBox Margin="20,0,0,0" VerticalAlignment="Center" Name="varianta_4">Varianta corecta</CheckBox>
+            </StackPanel>
+            <Button Click="Button_Click_1" Margin="280,10,0,0">Adauga intrebare</Button>
+            <TextBox Name="generat"></TextBox>
+        </StackPanel>
+    </Grid>
+</Window>

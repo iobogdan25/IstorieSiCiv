@@ -1,0 +1,56 @@
+﻿<Window x:Class="Istorie.ConsolidareSUA"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ConsolidareSUA" Height="850" Width="850">
+    <Window.Background>
+        <ImageBrush Opacity="1" ImageSource="Resources/chainimage-old-paper-background-old-paper-background.jpg"/>
+    </Window.Background>
+    <Grid Name="main_grid">
+        <ScrollViewer>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BorderThickness="0.5" BorderBrush="Black" Margin="40,50,0,0">
+                <StackPanel >
+                        <Image Source="Resources/Gilbert_Stuart,_George_Washington_(Lansdowne_portrait,_1796).jpg" Stretch="Fill" Margin="10"></Image>
+                        <TextBlock HorizontalAlignment="Center" FontFamily="Georgia" FontStyle="Italic" FontSize="14">George Washington</TextBlock>
+                        <TextBlock TextWrapping="Wrap" Margin="10" FontFamily="Georgia" xml:space="preserve">George Washington (n. 22 februarie 1732, Westmoreland, Virginia Virginia — d. 14 decembrie 1799, Mount Vernon, Virginia) a fost un general și om de stat american, militant și factor activ în obținerea independenței față de Regatul Unit a coloniilor din America de Nord, primul președinte al Statelor Unite ale Americii.</TextBlock>
+                        <Image Source="Resources/800px-War_of_1812_Montage.jpg" Stretch="Fill" Margin="10"></Image>
+                        <TextBlock HorizontalAlignment="Center" FontFamily="Georgia" FontStyle="Italic" FontSize="14">Războiul din 1812</TextBlock>
+                        <TextBlock TextWrapping="Wrap" Margin="10" FontFamily="Georgia" xml:space="preserve">Războiul de la 1812 a fost un conflict militar între forțele Statelor Unite ale Americii și cele ale Imperiului Britanic. Americanii au declarat război în 1812 pentru o serie de motive, incluzând dorința de expansiune în Teritoriile de Nord-Vest, sprijinul acordat de Marea Britanie triburilor de Amerindieni împotriva expansiunii Americane, precum și umilirea onoarei americane.</TextBlock>
+
+                    </StackPanel>
+            </Border>
+            <StackPanel Margin="10,10,10,0" Grid.Column="1">
+                <TextBlock FontSize="30" FontFamily="Georgia">Consolidarea SUA</TextBlock>
+                <Line StrokeThickness="0.9" X1="2" Fill="Black" Stroke="Black" X2="3000"/>
+                <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       Coloniile engleze din America de Nord, în număr de 13, au fost înființate de către grupuri de englezi între anii 1607-1733 pe litoralul atlantic al Americii de Nord. Cauzele migrației au fost multiple: dorința unei vieți mai bune, nevoia de libertate religioasă și teama de persecuțiile politice. Exemple de colonii: Virginia, New York, Carolina de N și de S, Georgia. Aceste colonii au evoluat economic într-un timp scurt datorită mentalităților moderne ale imigranților și eforturilor depuse. Pentru a nu avea un concurent puternic în America, Anglia a impus anumite restricții sub forma unor taxe și impozite cu caracter comercial, interzicerea extinderii spre vest și interdicția comerțului cu alte state. Cele 13 colonii erau lipsite de reprezentare în instituțiile de la Londra.</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       Nemulțumirile politice și economice generate de Anglia au provocat diferite proteste în colonii. Oameni politici precum Patrick Henry și Thomas Jefferson au adresat petiții regelui George al III-lea și au propus boicotarea produselor gravate de taxe. Introducerea taxei asupra comerțului cu ceai a provocat incidentul din portul Boston, cunoscut sub numele de "Partida de ceai". În 1774 reprezentații celor 13 colonii s-au întrecut în congresul de la Philadelphia care a hotărât respingerea dominației engleze și boicotarea tuturor mărfurilor engleze.</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       Războiul dintre colonii și Anglia a avut loc între anii 1775-1781, americanii fiind ajutați de Franța, Spania și Olanda. Comandantul armatei americane a fost George Washington (și primul președinte al SUA).</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       În 4 iulie 1776 a fost adoptată într-un congres la Philadelphia "Declarația de Independență", elaborată de Thomas Jefferson în cadrul căreia erau formulate principii iluministe(drepturile naturale și voința de libertate).</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       În 1783, la Versailles, Anglia a recunoscut independența SUA și dreptul de a se extinde spre vest.</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       Organizarea SUA ca republică federală pe baza principiului separației puterilor în stat a fost adoptată în 1787. Puterea executivă este exercitată de președinte și de vicepreședinte timp de 2 mandate de câte 4 ani. Președintele este șeful statutului, al Guvernului, șeful armatei și numește pe cei nouă judecători la Curtea Supremă de Justiție. Puterea legislativă este exercitată de Congres, format din Senat(câte 2 senatori în fiecare stat) și Camera Reprezentanților(proporțional cu numărul locuitorilor din fiecare stat). Puterea judecătorească este exercitată de Curtea Supremă de Justiție a SUA.</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       În 1791 au fost introduse zece amendamente privind drepturi și libertăți ale cetățenilor. Fiecare stat component(50 în total) are propriile instituții și legi. Sistemul politic american are la bază două partide: Partidul Republican și Partidul Democrat.</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       În anii de început, exista o polemică intensă cu privire la orientarea socio-politică a tinerei republici. Implicarea nefericită a SUA în disputele europene a condus la politica izolaționistă, formulată în 1832 de președintele James Monroe.</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       După creșterea economică de după Războiul din 1812, urmează dezvoltarea teritoriilor centrale de către fermieri care căutau terenuri noi. Aceasta a determinat conflicte interminabile cu triburile de amerindieni care fuseseră înghesuite spre nord sau mutate în rezervații. În 1819, Florida este cumpărată de la spanioli.</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve">       Pe parcursul secolului al XIX-lea, națiunea s-a extins rapid, adăugând multe state noi, fie prin cumpărări de regiuni întregi (Louisiana de la francezi în 1803; Florida de la spanioli în 1819; Alaska de la ruși în 1867), fie prin cuceriri (Texasul de la Mexic în 1845, mai mult de jumătate din teritoriul Mexicului în urma războiului americano-mexican din 1846-1848). Destinul Manifest a fost o filozofie care a încurajat extinderea Statelor Unite înspre vest: deoarece populația statelor din est creștea și imigranți noi intrau în țară, mulți oameni continuu se mutau înspre vest.</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="17" FontFamily="Georgia" Margin="0,15,0,0" xml:space="preserve"></TextBlock>
+            </StackPanel>
+            <Border Grid.Column="2" BorderThickness="0.5" BorderBrush="Black" Margin="0,50,40,0">
+                <StackPanel >
+                        <Image Source="Resources/Thomas_Jefferson_by_Rembrandt_Peale,_1800.jpg" Stretch="Fill" Margin="10"></Image>
+                        <TextBlock HorizontalAlignment="Center" FontFamily="Georgia" FontStyle="Italic" FontSize="14">Thomas Jefferson</TextBlock>
+                        <TextBlock TextWrapping="Wrap" Margin="10" FontFamily="Georgia" xml:space="preserve">Thomas Jefferson (n. 13 aprilie 1743 - d. 4 iulie 1826) a fost al doilea vicepreședinte și al treilea președinte al Statelor Unite ale Americii (1801 - 1809), autor al Declarației de Independență (1776), și unul dintre cei mai influenți dintre "părinții fondatori" ai Statelor Unite. Evenimentele majore din timpul președinției sale includ Louisiana Purchase (Achiziția Louisianei) (1803), Actul Embargoului din 1807 și Expediția lui Lewis și Clark (1804 – 1806).</TextBlock>
+                        <Image Source="Resources/American_progress.JPG" Stretch="Fill" Margin="10"></Image>
+                        <TextBlock HorizontalAlignment="Center" FontFamily="Georgia" FontStyle="Italic" FontSize="14">American Progress</TextBlock>
+                        <TextBlock TextWrapping="Wrap" Margin="10" FontFamily="Georgia" xml:space="preserve">Această pictură (circa 1872) de John Gast, intitulată American Progress, este o reprezentare alegorică a conceptului Manifest Destiny. Aici, Columbia, personificare a Statelor Unite, având o carte în mână şi întinzând fire de telegraf pe măsură ce avansează, conduce procesul de „domesticire” şi „civilizare” al vestului Americii cu colonişti.</TextBlock>
+
+                    </StackPanel>
+            </Border>
+        </Grid>
+        </ScrollViewer>
+    </Grid>
+</Window>
